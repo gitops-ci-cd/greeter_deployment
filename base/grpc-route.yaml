@@ -12,7 +12,8 @@ spec:
     - "greeter.localhost"
   rules:
     - matches:
-        - method: {}  # Matches all gRPC services and methods
+        - method:
+            service: com.acme.schema.v1.Greeter
       backendRefs:
         - name: greeter
           port: 50051
