@@ -2,22 +2,22 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: GRPCRoute
 metadata:
-  name: greeter-route
+  name: greeter-service-route
 spec:
   parentRefs:
-    - name: greeter
+    - name: greeter-service
       kind: Service
       group: core
   hostnames:
-    - "greeter.localhost"
+    - "greeter-service.localhost"
   rules:
     - matches:
         - method:
-            service: com.acme.schema.v1.Greeter
+            service: com.acme.schema.v1.GreeterService
             type: Exact
       backendRefs:
         - group: ''
           kind: Service
-          name: greeter
+          name: greeter-service
           port: 50051
           weight: 1

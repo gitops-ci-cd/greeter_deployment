@@ -1,3 +1,3 @@
-# Greeter Deployment
+# Greeter Service Deployment
 
-Kubernetes manifests for deploying the Greeter service.
+Kubernetes manifests for deploying the Greeter Service.
