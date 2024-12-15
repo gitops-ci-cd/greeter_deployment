@@ -3,21 +3,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: greeter-service
-  name: greeter-service
+    app: greeting-service
+  name: greeting-service
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: greeter-service
+      app: greeting-service
   template:
     metadata:
       labels:
-        app: greeter-service
+        app: greeting-service
     spec:
       containers:
         - name: app
-          image: ghcr.io/gitops-ci-cd/greeter-service:205e9b3dba5365cfb44db168521a4146da2f3d06
+          image: ghcr.io/gitops-ci-cd/greeting-service:ba8e92dd439cbad175051ea5518edcd7f7bcdc20
           env:
             - name: PORT
               value: "50051"
