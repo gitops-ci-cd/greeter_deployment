@@ -8,12 +8,10 @@ spec:
     - name: greeting-service
       kind: Service
       group: core
-  hostnames:
-    - "greeting-service.localhost"
   rules:
     - matches:
         - method:
-            service: com.acme.schema.v1.GreeterService
+            service: com.acme.schema.v1.GreetingService
             type: Exact
       backendRefs:
         - group: ''
