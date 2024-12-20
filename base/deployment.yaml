@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: app
-          image: ghcr.io/gitops-ci-cd/greeting-service:c11cf901974f70f18cba38424567b4a602ef63a3
+          image: ghcr.io/gitops-ci-cd/greeting-service:662a9223ef3619bd41567c92f25755271138e738
           env:
             - name: PORT
               value: "50051"
