@@ -12,12 +12,3 @@ spec:
     metadata:
       labels:
         environment: production
-    spec:
-      containers:
-        - name: app
-          env:
-            - name: LOG_LEVEL
-              value: DEBUG
-
-patches:
-  - path: deployment.yaml

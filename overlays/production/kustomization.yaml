@@ -6,6 +6,7 @@ resources:
   - ../../base
 
 patches:
+  - path: deployment.yaml
   - target:
       kind: GRPCRoute
       name: greeting-service-route

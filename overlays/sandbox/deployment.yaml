@@ -12,9 +12,3 @@ spec:
     metadata:
       labels:
         environment: sandbox
-    spec:
-      containers:
-        - name: app
-          env:
-            - name: LOG_LEVEL
-              value: DEBUG
