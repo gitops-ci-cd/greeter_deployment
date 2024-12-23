@@ -19,9 +19,3 @@ spec:
           name: greeting-service
           port: 50051
           weight: 1
-    - backendRefs:
-        - group: ''
-          kind: Service
-          name: greeting-service
-          port: 50051
-          weight: 1
