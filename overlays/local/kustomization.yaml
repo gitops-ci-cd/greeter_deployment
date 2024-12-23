@@ -12,14 +12,17 @@ patches:
       name: greeting-service-route
     patch: |-
       - op: add
-        path: /spec/rules/0/matches/0/headers
-        value: []
+        path: /spec/rules/0/matches/0/headers/values/x-subdomain
+        value: sandbox
       - op: add
-        path: /spec/rules/0/matches/0/headers/-
+        path: /spec/rules/-
         value:
-          name: x-subdomain
-          type: Exact
-          value: sandbox
+          matches:
+            - method:
+                service: grpc.reflection.v1.ServerReflection
+          backendRefs:
+            - name: greeting-service
+              port: 50051
   - target:
       kind: Service
       name: greeting-service
