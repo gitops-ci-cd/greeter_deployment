@@ -12,8 +12,10 @@ patches:
       name: greeting-service-route
     patch: |-
       - op: add
-        path: /spec/rules/0/matches/0/headers/values/x-subdomain
-        value: sandbox
+        path: /spec/rules/0/matches/0/headers
+        value:
+          values:
+            x-subdomain: sandbox
   - target:
       kind: Service
       name: greeting-service
