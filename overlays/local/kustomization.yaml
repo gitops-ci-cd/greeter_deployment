@@ -26,9 +26,13 @@ patches:
           matches:
             - method:
                 service: grpc.reflection.v1.ServerReflection
+                type: Exact
           backendRefs:
-            - name: greeting-service
+            - group: ''
+              kind: Service
+              name: greeting-service
               port: 50051
+              weight: 1
   - target:
       kind: Service
       name: greeting-service
