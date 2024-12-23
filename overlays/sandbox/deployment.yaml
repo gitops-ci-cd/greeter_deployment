@@ -2,16 +2,16 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    environment: local
+    environment: sandbox
   name: greeting-service
 spec:
   selector:
     matchLabels:
-      environment: local
+      environment: sandbox
   template:
     metadata:
       labels:
-        environment: local
+        environment: sandbox
     spec:
       containers:
         - name: app

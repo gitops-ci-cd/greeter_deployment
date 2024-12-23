@@ -2,19 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    environment: local
+    environment: production
   name: greeting-service
 spec:
   selector:
     matchLabels:
-      environment: local
+      environment: production
   template:
     metadata:
       labels:
-        environment: local
+        environment: production
     spec:
       containers:
         - name: app
           env:
             - name: LOG_LEVEL
               value: DEBUG
+
+patches:
+  - path: deployment.yaml

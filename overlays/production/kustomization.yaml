@@ -19,3 +19,10 @@ patches:
           name: x-subdomain
           type: Exact
           value: www
+  - target:
+      kind: Service
+      name: greeting-service
+    patch: |-
+      - op: add
+        path: /spec/selector/environment
+        value: production

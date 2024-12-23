@@ -7,3 +7,10 @@ resources:
 
 patches:
   - path: deployment.yaml
+  - target:
+      kind: Service
+      name: greeting-service
+    patch: |-
+      - op: add
+        path: /spec/selector/environment
+        value: preview
