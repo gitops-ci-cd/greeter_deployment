@@ -7,3 +7,16 @@ resources:
 
 patches:
   - path: deployment.yaml
+  - target:
+      kind: GRPCRoute
+      name: greeting-service-route
+    patch: |-
+      - op: add
+        path: /spec/rules/0/matches/0/headers
+        value: []
+      - op: add
+        path: /spec/rules/0/matches/0/headers/-
+        value:
+          name: x-subdomain
+          type: Exact
+          value: sandbox
