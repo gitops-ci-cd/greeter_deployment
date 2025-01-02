@@ -6,3 +6,8 @@ resources:
   - deployment.yaml
   - service.yaml
   - grpc-route.yaml
+
+images:
+  - name: greeting-service
+    newName: ghcr.io/gitops-ci-cd/greeting-service
+    newTag: d7f87fd4984b2c3c576f5b2b002e8f69afc743f6
