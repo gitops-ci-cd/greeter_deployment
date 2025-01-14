@@ -7,4 +7,4 @@ resources:
 images:
 - name: greeting-service
   newName: ghcr.io/gitops-ci-cd/greeting-service
-  digest: sha256:993383dd05b42c8c18d824d61bc479c57eabc753ac2ffe2c6470dc8f02613d2b
+  newTag: fd268b599e6e4f30e58a841642fcea8045948056
